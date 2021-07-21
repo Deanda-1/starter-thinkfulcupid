@@ -72,6 +72,7 @@ header nav {
 
 header nav ul {
   display: flex;
+  padding-left: 0;
 }
 
 header nav ul li {
@@ -84,24 +85,16 @@ header nav ul li a {
   padding: 0 20px 0 0;
 }
 
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
-}
-
 /* -------  Join Form ------- */
 form {
   border: 2px solid #6b1a22;
+  display: flex;
+  flex-flow: column nowrap;
   padding: 10px;
 }
 
 form label {
   font-weight: bold;
-}
-
-form div {
-  display: flex;
-  justify-content: space-between;
 }
 
 form select,
@@ -117,6 +110,11 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+}
+
+.form-line {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* -------  Footer ------- */
@@ -137,20 +135,18 @@ footer p {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
-  }
-
-  .logo {
-    margin: 14px 0 14px 20px;
-    font-size: 42px;
-  }
-
-  header nav ul {
-    align-items: center;
+    padding: 0 30px;
   }
 
   .group {
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+  }
+
+  #blog .item {
+    flex: calc(50% - 20px);
+    margin: 10px;
   }
 }
